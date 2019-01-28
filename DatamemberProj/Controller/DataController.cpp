@@ -7,3 +7,8 @@
 //
 
 #include "DataController.hpp"
+
+void Controller :: start()
+{
+    cout << "Welcome to the Data Structures App." << endl;
+}
