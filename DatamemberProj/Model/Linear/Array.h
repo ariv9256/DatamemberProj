@@ -79,5 +79,17 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
     }
     return *this;
 }
+template<class Type>
+Type & Array<Type> :: operator [] (int index)
+{
+    assert(index >= 0 && index < size);
+    return internalArray[index];
+}
+template <class Type>
+Type Array<Type> :: operator [] (int index) const
+{
+    assert(index >= 0 && index < size);
+    return internalArray[index];
+}
 
 #endif /* Array_h */
