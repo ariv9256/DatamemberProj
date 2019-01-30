@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F7FBFC52202330400942345 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		0F9DC02121FF8B190067795E /* DatamemberProj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DatamemberProj; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9DC02F21FF8BE70067795E /* DataController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataController.cpp; sourceTree = "<group>"; };
 		0F9DC03021FF8BE70067795E /* DataController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataController.hpp; sourceTree = "<group>"; };
@@ -42,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F7FBFBF220226D200942345 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				0F9DC03421FF916A0067795E /* Node.hpp */,
+				0F7FBFC52202330400942345 /* LinearNode.hpp */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
 		0F9DC01821FF8B190067795E = {
 			isa = PBXGroup;
 			children = (
@@ -72,7 +82,7 @@
 		0F9DC02B21FF8B850067795E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0F9DC03421FF916A0067795E /* Node.hpp */,
+				0F7FBFBF220226D200942345 /* Nodes */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,16 +289,22 @@
 		0F9DC02921FF8B1A0067795E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		0F9DC02A21FF8B1A0067795E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
