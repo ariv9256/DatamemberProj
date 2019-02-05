@@ -84,15 +84,6 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		0F91A439220A1BF000BDC924 /* Read File */ = {
-			isa = PBXGroup;
-			children = (
-				0F91A43A220A1C3B00BDC924 /* FileController.cpp */,
-				0F91A43B220A1C3B00BDC924 /* FileController.hpp */,
-			);
-			path = "Read File";
-			sourceTree = "<group>";
-		};
 		0F9DC01821FF8B190067795E = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +143,8 @@
 		0F9DC02E21FF8B9A0067795E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0F91A439220A1BF000BDC924 /* Read File */,
+				0F91A43A220A1C3B00BDC924 /* FileController.cpp */,
+				0F91A43B220A1C3B00BDC924 /* FileController.hpp */,
 				0F91A434220A14BE00BDC924 /* Tools */,
 				0F9DC02F21FF8BE70067795E /* DataController.cpp */,
 				0F9DC03021FF8BE70067795E /* DataController.hpp */,
