@@ -17,4 +17,6 @@
 #include <vector>
 #include <sstream>
 
+using namespace std;
+
 #endif /* FileController_hpp */
