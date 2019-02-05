@@ -92,7 +92,6 @@
 		0F9DC02321FF8B190067795E /* DatamemberProj */ = {
 			isa = PBXGroup;
 			children = (
-				0F91A434220A14BE00BDC924 /* Tools */,
 				0F9DC02E21FF8B9A0067795E /* Controller */,
 				0F9DC02D21FF8B920067795E /* Resources */,
 				0F9DC02C21FF8B8C0067795E /* Diagrams */,
@@ -127,6 +126,7 @@
 		0F9DC02E21FF8B9A0067795E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0F91A434220A14BE00BDC924 /* Tools */,
 				0F9DC02F21FF8BE70067795E /* DataController.cpp */,
 				0F9DC03021FF8BE70067795E /* DataController.hpp */,
 				0F9DC03221FF8C060067795E /* DataRunner.cpp */,
