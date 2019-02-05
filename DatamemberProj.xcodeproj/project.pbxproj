@@ -93,19 +93,6 @@
 			path = "Read File";
 			sourceTree = "<group>";
 		};
-		0F91A43D220A1E4300BDC924 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				0F91A445220A204F00BDC924 /* Music.hpp */,
-				0F91A444220A204100BDC924 /* music.csv */,
-				0F91A442220A203500BDC924 /* Music.cpp */,
-				0F91A441220A1EDC00BDC924 /* crime.csv */,
-				0F91A440220A1EC500BDC924 /* CrimeData.hpp */,
-				0F91A43E220A1EB700BDC924 /* CrimeData.cpp */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		0F9DC01821FF8B190067795E = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +112,6 @@
 		0F9DC02321FF8B190067795E /* DatamemberProj */ = {
 			isa = PBXGroup;
 			children = (
-				0F91A43D220A1E4300BDC924 /* Data */,
 				0F9DC02E21FF8B9A0067795E /* Controller */,
 				0F9DC02D21FF8B920067795E /* Resources */,
 				0F9DC02C21FF8B8C0067795E /* Diagrams */,
@@ -153,6 +139,12 @@
 		0F9DC02D21FF8B920067795E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0F91A445220A204F00BDC924 /* Music.hpp */,
+				0F91A444220A204100BDC924 /* music.csv */,
+				0F91A442220A203500BDC924 /* Music.cpp */,
+				0F91A441220A1EDC00BDC924 /* crime.csv */,
+				0F91A440220A1EC500BDC924 /* CrimeData.hpp */,
+				0F91A43E220A1EB700BDC924 /* CrimeData.cpp */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
