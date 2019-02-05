@@ -7,11 +7,13 @@
 //
 
 #include "DataController.hpp"
+#include "FileController.hpp"
 
 void Controller :: start()
 {
     cout << "Welcome to the Data Structures App." << endl;
     usingNodes();
+    testFiles();
 }
 
 void Controller :: usingNodes ()
@@ -22,4 +24,17 @@ void Controller :: usingNodes ()
     cout << wordHolder.getData() << endl;
     wordHolder.setData("replace text");
     cout << wordHolder.getData()<<  endl;
+}
+void Controller :: testFiles()
+{
+    vector<Music> musicVector = FileController :: musicDataToVector("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/Music.hpp");
+    for(int index = 234; index == 255; index++)
+    {
+        cout << index<< ": contents are: " << musicVector[index]<< endl;
+    }
+    vector<CrimeData> crimeVector = FileController :: readCrimeDataToVector("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/crime.csv");
+    for(int index = 234; index == 255; index++)
+    {
+        cout << index << ": contents are: " << crimeVector[index]<< endl;
+    }
 }

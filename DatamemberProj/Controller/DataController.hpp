@@ -12,6 +12,13 @@
 #include <iostream>
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
+#include "../Resources/Music.hpp"
+#include "../Resources/CrimeData.hpp"
+#include <string>
+#include <fstream>
+#include <vector>
+#include <sstream>
+
 
 using namespace std;
 
@@ -21,6 +28,6 @@ private:
     void usingNodes();
 public:
     void start();
-    
+    void testFiles();
 };
 #endif /* DataController_hpp */
