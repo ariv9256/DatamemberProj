@@ -152,5 +152,17 @@ Type LinkedList<Type> :: remove(int index)
     delete toBeRemoved;
     return removedData;
 }
+LinearNode<Type> * LinkedList<Type> :: getEnd()
+{
+    return this->end;
+}
+LinearNode<Type> * LinkedList<Type> :: getFront()
+{
+    return this->front;
+}
+int LinkedList<Type> :: getSize() const
+{
+    return this->size;
+}
         
 #endif /* LinkedList_hpp */
