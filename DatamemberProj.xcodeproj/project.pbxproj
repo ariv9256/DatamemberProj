@@ -29,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0F09846E220CBAB200E0694D /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
+		0F098473220CC8D700E0694D /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		0F654186220239ED00DEBEE3 /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
 		0F7FBFC52202330400942345 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		0F91A435220A170800BDC924 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 			children = (
 				0F654186220239ED00DEBEE3 /* Array.h */,
 				0F09846E220CBAB200E0694D /* List.hpp */,
+				0F098473220CC8D700E0694D /* LinkedList.hpp */,
 			);
 			path = Linear;
 			sourceTree = "<group>";
