@@ -37,12 +37,14 @@ public:
     Type remove(int index));
     //Bool contains (Type item);
 };
+template <class Type>
 LinkedList<Type> :: LinkedList()
 {
     this ->front = nullptr;
     this ->end = nullptr;
     this ->size = 0;
 }
+template <class Type>
 void LinkedList<Type> :: add(Type item)
 {
     LinearNode<Type> * newData = new LinearNode<Type>(item);
@@ -59,6 +61,7 @@ void LinkedList<Type> :: add(Type item)
     
     this->size += 1;
 }
+template<class Type>
 void LinkedList<Type> :: addAtIndex(int index, Type item)
 {
     assert(index >= 0 && index <= this->size);
@@ -68,7 +71,7 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
     }
     else
     {
-        LinearNode<Type> * toBeAdded = new LinearNode<Type>(item0;
+        LinearNode<Type> * toBeAdded = new LinearNode<Type>(item);
         if (index == 0)
         {
             toBeAdded->setNextnode(front);
@@ -88,7 +91,24 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
         }
         this->size++;
     }
+
 }
-
-
+template <class Type>
+Type LinkedList<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->size);
+    Type data;
+    
+    LinearNode<Type> * current = front;
+    
+    for(int positon = 0; positon < index; postion++)
+    {
+        curernt = current->getNextNode();
+    }
+    
+    data = current -> getData();
+    
+    return data;
+}
+        
 #endif /* LinkedList_hpp */
