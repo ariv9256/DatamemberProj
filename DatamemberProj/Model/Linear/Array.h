@@ -14,7 +14,7 @@
 
 using namespace std;
 
-teplate <class Type>
+template <class Type>
 class Array
 {
 private:
