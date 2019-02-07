@@ -27,7 +27,7 @@ void Controller :: usingNodes ()
 }
 void Controller :: testFiles()
 {
-    vector<Music> musicVector = FileController :: musicDataToVector("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/Music.hpp");
+    vector<Music> musicVector = FileController :: musicDataToVector("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/music.csv");
     for(int index = 234; index == 255; index++)
     {
         cout << index<< ": contents are: " << musicVector[index]<< endl;

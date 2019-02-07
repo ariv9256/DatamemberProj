@@ -23,7 +23,7 @@ vector <CrimeData> FileController :: readCrimeDataToVector(string filename)
         while (!dataFile.eof())
         {
             //Grab each lilne from the CSV separated by carriage return char.
-            getline(dataFile, currentCSVLine, '\r');
+            getline(dataFile, currentCSVLine, '\n');
             //Exclude header row
             if (rowCount != 0 )
             {
@@ -59,7 +59,7 @@ vector <Music> FileController :: musicDataToVector(string filename)
         while (!dataFile.eof())
         {
             //Grab each lilne from the CSV separated by carriage return char.
-            getline(dataFile, currentCSVLine, '\r');
+            getline(dataFile, currentCSVLine, '\n');
             //Exclude header row
             if (rowCount != 0 )
             {

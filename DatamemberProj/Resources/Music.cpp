@@ -25,7 +25,6 @@ Music :: Music(string data)
     getline(parseCSV, bars_confidence, ',');
     getline(parseCSV, bars_start, ',');
     getline(parseCSV, beats_confidence, ',');
-    getline(parseCSV, beats_confidence, ',');
     getline(parseCSV, beats_start, ',');
     getline(parseCSV, duration, ',');
     getline(parseCSV, end_of_fade_in, ',');
