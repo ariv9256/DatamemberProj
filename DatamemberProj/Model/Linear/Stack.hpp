@@ -34,5 +34,13 @@ Stack<Type> :: Stack() : LinkedList<Type>()
 {
     //nada
 }
+template<class Type>
+Stack<Type> :: ~Stack()
+{
+    while(this ->size > 0)
+    {
+        pop();
+    }
+}
 
 #endif /* Stack_hpp */
