@@ -75,7 +75,7 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
         LinearNode<Type> * toBeAdded = new LinearNode<Type>(item);
         if (index == 0)
         {
-            toBeAdded->setNextnode(front);
+            toBeAdded->setNextNode(front);
             front = toBeAdded;
         }
         else

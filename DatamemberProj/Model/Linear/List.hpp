@@ -14,13 +14,13 @@
 #include <assert.h>
 
 template <class Type>
-class List<Type>
+class List
 {
 protected:
     int size;
 public:
     //List operators
-    virtual void add(TYpe item) = 0;
+    virtual void add(Type item) = 0;
     virtual void addAtIndex(int index, Type item) = 0;
     virtual Type remove(int index) = 0;
     virtual Type getFromIndex(int index) = 0;
