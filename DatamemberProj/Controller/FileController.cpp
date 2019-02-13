@@ -89,14 +89,18 @@ LinkedList<Music> FileController :: musicDataToList(string fileName)
     
     ifstream dataFile(fileName);
     
+    //If open, path exists
     if(dataFile.is_open())
     {
+        //Keep reading until you are at end of file
         while(!dataFile.eof())
         {
+            //Grab each line from CSV separated by return character
             getline(dataFile, currentCSVLine, 'n/');
-            
+            //Exclude header row
             if(rowCount != 0)
             {
+                //Create a music instance from the line. Exclude a blank line
                 if(currentCSVLine.length() != 0)
                 {
                     Music row(currentCSVLine);
