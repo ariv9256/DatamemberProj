@@ -63,5 +63,11 @@ void Queue<Type> :: enqueue(Type item)
     this->end = added;
     this->size++;
 }
+template<class Type>
+void Queue<Type> :: addAtIndex(int index, Type item)
+{
+    assert(index == this->size);
+    enqueue(item);
+}
 
 #endif /* Queue_hpp */
