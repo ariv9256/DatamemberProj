@@ -79,7 +79,7 @@ Type Queue<Type> :: dequeue()
 {
     assert(this->size > 0);
     
-    TYpe returned = this->front->getData();
+    Type returned = this->front->getData();
     
     LinearNode<Type> * removed = this->front;
     this->front = removed->getNextNode();
@@ -90,5 +90,12 @@ Type Queue<Type> :: dequeue()
     
     return returned;
 }
+template <class Type>
+Type Queue<Type> :: remove(int index)
+{
+    assert(index = 0);
+    return dequeue();
+}
+
 
 #endif /* Queue_hpp */
