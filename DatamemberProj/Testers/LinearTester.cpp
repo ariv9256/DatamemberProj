@@ -35,4 +35,9 @@ void LinearTester :: testVsSTL()
     musicSTL.displayInformation();
     musicOOP.displayInformation();
     cout<< "A difference of: " << musicOOP.getTimeInMicroseconds() - musicSTL.getTimeInMicroseconds() << " microseconds" << endl;
+    
+    crimeTimerOOP.resetTimer();
+    crimeTimerSTL.resetTimer();
+    musicOOP.resetTimer();
+    musicSTL.resetTimer();
 }
