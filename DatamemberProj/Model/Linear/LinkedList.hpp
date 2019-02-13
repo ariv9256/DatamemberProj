@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include "List.hpp"
+#include <assert.h>
 
 using namespace std;
 
@@ -29,13 +30,13 @@ public:
     //Helper methods
     LinearNode<Type> * getFront();
     LinearNode<Type> * getEnd();
-    
     //Structure methods
     void add(Type item);
     void addAtIndex(int index, Type item);
     Type getFromIndex(int index);
-    Type remove(int index));
+    Type remove(int index);
     bool contains (Type item);
+    int getSize() const;
 };
 template <class Type>
 LinkedList<Type> :: LinkedList()
@@ -101,15 +102,16 @@ Type LinkedList<Type> :: getFromIndex(int index)
     
     LinearNode<Type> * current = front;
     
-    for(int positon = 0; positon < index; postion++)
+    for(int position = 0; position < index; position++)
     {
-        curernt = current->getNextNode();
+        current = current->getNextNode();
     }
     
     data = current -> getData();
     
     return data;
 }
+template <class Type>
 Type LinkedList<Type> :: remove(int index)
 {
     assert(index >= 0 && index < this-> size);
@@ -127,7 +129,7 @@ Type LinkedList<Type> :: remove(int index)
     }
     else
     {
-        for(int positon = 0; position < index; position++)
+        for(int position = 0; position < index; position++)
         {
             previous = current;
             current = current-> getNextNode();
@@ -152,14 +154,17 @@ Type LinkedList<Type> :: remove(int index)
     delete toBeRemoved;
     return removedData;
 }
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getEnd()
 {
     return this->end;
 }
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getFront()
 {
     return this->front;
 }
+template<class Type>
 int LinkedList<Type> :: getSize() const
 {
     return this->size;
