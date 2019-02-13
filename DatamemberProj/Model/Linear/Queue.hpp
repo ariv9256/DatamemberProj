@@ -96,6 +96,19 @@ Type Queue<Type> :: remove(int index)
     assert(index = 0);
     return dequeue();
 }
-
+template <class Type>
+void Queue<Type> :: clear()
+{
+    while(this->front != nullptr)
+    {
+        cout << dequeue() << endl;
+    }
+}
+template <class Type>
+Type Queue<Type> :: peek()
+{
+    assert(this->size > 0);
+    return this->getFront()->getData();
+}
 
 #endif /* Queue_hpp */
