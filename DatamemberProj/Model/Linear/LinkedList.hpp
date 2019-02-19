@@ -46,6 +46,17 @@ LinkedList<Type> :: LinkedList()
     this ->size = 0;
 }
 template <class Type>
+LinkedList<Type> :: ~LinkedList()
+{
+    LinearNode<Type> * destroyStructure = front;
+    while(front != nullptr)
+    {
+        front = destroyStructure->getNextNode();
+        delete destroyStructure;
+        destroyStructure = front;
+    }
+}
+template <class Type>
 void LinkedList<Type> :: add(Type item)
 {
     LinearNode<Type> * newData = new LinearNode<Type>(item);
