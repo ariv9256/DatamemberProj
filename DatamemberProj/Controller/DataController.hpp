@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "../Model/Nodes/Node.hpp"
+#include "../Model/Nodes/DoubleNode.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
 #include "../Resources/Music.hpp"
 #include "../Resources/CrimeData.hpp"

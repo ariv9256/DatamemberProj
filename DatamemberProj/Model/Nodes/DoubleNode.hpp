@@ -22,7 +22,7 @@ protected:
 public:
     DoubleNode();
     DoubleNode(Type data);
-    DoubleNode(Type data, DoubleNode <Type> * previous, Double<Type> * next);
+    DoubleNode(Type data, DoubleNode <Type> * previous, DoubleNode<Type> * next);
     
     DoubleNode<Type> * getPrevious();
     DoubleNode<Type> * getNext();
@@ -30,5 +30,38 @@ public:
     void setPrevious(DoubleNode<Type> * previous);
     void setNext(DoubleNode<Type> * next);
 };
+template<class Type>
+DoubleNode<Type> :: DoubleNode() : Node<Type>()
+{
+    previous = nullptr;
+    next = nullptr;
+}
+
+template <class Type>
+DoubleNode<Type> :: DoubleNode(Type data) : Node<Type>(data)
+{
+    previous = nullptr;
+    next = nullptr;
+}
+template<class Type>
+void DoubleNode<Type> :: setNext(DoubleNode<Type> * next)
+{
+    this->next = next;
+}
+template<class Type>
+void DoubleNode<Type> :: setPrevious(DoubleNode<Type> * previous)
+{
+    this->previous = previous;
+}
+template<class Type>
+DoubleNode<Type> * DoubleNode<Type> :: getPrevious()
+{
+    return previous;
+}
+template <class Type>
+DoubleNode<Type> * DoubleNode<Type> :: getNext()
+{
+    return next;
+}
 
 #endif /* DoubleNode_hpp */
