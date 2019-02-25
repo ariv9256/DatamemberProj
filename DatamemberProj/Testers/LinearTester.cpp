@@ -44,4 +44,50 @@ void LinearTester :: testVsSTL()
     crimeTimerSTL.resetTimer();
     musicOOP.resetTimer();
     musicSTL.resetTimer();
+    
+    int randomIndex = rand() % moreCrimes.getSize();
+    
+    crimeTimerSTL.startTimer();
+    crimes[randomIndex];
+    crimeTimerSTL.stopTimer();
+    
+    crimeTimerOOP.startTimer();
+    moreCrimes.getFromIndex(randomIndex);
+    crimeTimerOOP.stopTimer();
+    
+    cout<<"This is the STL random retrieval: " <<endl;
+    crimeTimerSTL.displayInformation();
+    cout<<"THis is the OOP Node random retrieval: "<<endl;
+    crimeTimerOOP.displayInformation();
+    cout<<"A difference of: "<<crimeTimerOOP.getTimeInMicroseconds() - crimeTimerSTL.getTimeInMicroseconds()<<" microseconds" <<endl;
+    
+    randomIndex = rand() % musicList.getSize();
+    
+    musicSTL.startTimer();
+    tunez[randomIndex];
+    musicSTL.stopTimer();
+    
+    musicOOP.startTimer();
+    musicList.getFromIndex(randomIndex);
+    musicOOP.stopTimer();
+    
+    cout<<"This is the STL random retrieval: " <<endl;
+    musicSTL.displayInformation();
+    cout<<"THis is the OOP Node random retrieval: "<<endl;
+    musicOOP.displayInformation();
+    cout<<"A difference of: "<<musicOOP.getTimeInMicroseconds() - musicSTL.getTimeInMicroseconds()<<" microseconds" <<endl;
+    
+   
+}
+void LinearTester :: testVsStack()
+{
+    
+}
+void LinearTester :: testVsQueue()
+{
+    
+}
+void LinearTester :: testVsDouble()
+{
+    
 }
