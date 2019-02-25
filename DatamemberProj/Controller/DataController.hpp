@@ -15,6 +15,7 @@
 #include "../Model/Nodes/LinearNode.hpp"
 #include "../Resources/Music.hpp"
 #include "../Resources/CrimeData.hpp"
+#include "../Testers/LinearTester.hpp"
 #include <string>
 #include <fstream>
 #include <vector>
@@ -30,5 +31,6 @@ private:
 public:
     void start();
     void testFiles();
+    void testLinear();
 };
 #endif /* DataController_hpp */

@@ -58,7 +58,7 @@ vector <Music> FileController :: musicDataToVector(string filename)
         //Keep reading until you are at the end of the file.
         while (!dataFile.eof())
         {
-            //Grab each lilne from the CSV separated by carriage return char.
+            //Grab each line from the CSV separated by carriage return char.
             getline(dataFile, currentCSVLine, '\n');
             //Exclude header row
             if (rowCount != 0 )

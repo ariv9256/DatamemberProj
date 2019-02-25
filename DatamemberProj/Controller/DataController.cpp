@@ -13,7 +13,8 @@ void Controller :: start()
 {
     cout << "Welcome to the Data Structures App." << endl;
     usingNodes();
-    testFiles();
+    //testFiles();
+    testLinear();
 }
 
 void Controller :: usingNodes ()
@@ -37,4 +38,11 @@ void Controller :: testFiles()
     {
         cout << index << ": contents are: " << crimeVector[index]<< endl;
     }
+}
+void Controller :: testLinear()
+{
+    LinearTester lookAtThis;
+    lookAtThis.testVsSTL();
+    lookAtThis.testVsQueue();
+    lookAtThis.testVsDouble();
 }
