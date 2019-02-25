@@ -9,10 +9,10 @@
 #ifndef CircularList_hpp
 #define CircularList_hpp
 
-#include "../Nodes/DoubleNode.hpp"
+#include "../Model/Nodes/DoubleNode.hpp"
 
 template<class Type>
-class CircularList : public DoubleNode<Type>
+class CircularList : public Node<Type>
 {
 private:
     DoubleNode<Type> * front;
