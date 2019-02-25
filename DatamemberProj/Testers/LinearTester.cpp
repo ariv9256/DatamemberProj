@@ -81,6 +81,16 @@ void LinearTester :: testVsSTL()
 }
 void LinearTester :: testVsStack()
 {
+    vector<CrimeData> crimes = FileController :: readCrimeDataToVector("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/crime.csv");
+    LinkedList<CrimeData> moreCrimes = FileController :: readDataToList("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/crime.csv");
+    
+    Stack<CrimeData> crimeStack;
+    
+    for(int index = 0; index < 10; index++)
+    {
+        crimeStack.push(crimes[index]);
+        cout<< moreCrimes[index] <<endl;
+    }
     
 }
 void LinearTester :: testVsQueue()

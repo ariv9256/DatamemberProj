@@ -130,7 +130,6 @@
 				0F53525C2214AE9A00A5772F /* Testers */,
 				0F9DC02E21FF8B9A0067795E /* Controller */,
 				0F9DC02D21FF8B920067795E /* Resources */,
-				0F9DC02C21FF8B8C0067795E /* Diagrams */,
 				0F9DC02B21FF8B850067795E /* Model */,
 			);
 			path = DatamemberProj;
@@ -143,13 +142,6 @@
 				0F7FBFBF220226D200942345 /* Nodes */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		0F9DC02C21FF8B8C0067795E /* Diagrams */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Diagrams;
 			sourceTree = "<group>";
 		};
 		0F9DC02D21FF8B920067795E /* Resources */ = {
