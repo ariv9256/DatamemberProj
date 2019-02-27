@@ -9,11 +9,12 @@
 #ifndef CircularList_hpp
 #define CircularList_hpp
 
-#include "../Model/Nodes/DoubleNode.hpp"
+#include "../Nodes/DoubleNode.hpp"
 
 template<class Type>
 class CircularList : public Node<Type>
 {
+    //Method headers
 private:
     DoubleNode<Type> * front;
     DoubleNode<Type> * end;
@@ -24,21 +25,23 @@ public:
     CircularList();
     ~CircularList();
     
-    void add(Type, item);
+    void add(Type item);
     void addAtIndex(int index, Type item);
     Type remove(int index);
     Type setAtIndex(int index, Type item);
     Type getFromIndex(int index);
     int getSize() const;
-}
+};
 template <class Type>
+//Circular List base constructor
 CircularList<Type> :: CircularList()
 {
     front = nullptr;
     end = nullptr;
-    this-> = 0;
+    this->size = 0;
 }
 template<class Type>
+//Circular List destructor
 CircularList<Type> :: ~CircularList()
 {
     DoubleNode<Type> * current = front;
@@ -51,6 +54,7 @@ CircularList<Type> :: ~CircularList()
     delete front;
 }
 template <class Type>
+//findNode, take the size of index and divide by two to quickly find results.
 DoubleNode<Type> * CircularList<Type> :: findNode(int index)
 {
     assert(index >= 0 && index < this->size);
@@ -72,9 +76,10 @@ DoubleNode<Type> * CircularList<Type> :: findNode(int index)
             nodeToFind = nodeToFind->getPrevious();
         }
     }
-    return nodeToFind
+    return nodeToFind;
 }
 template <class Type>
+//basic add method
 void CircularList<Type> :: add(Type item)
 {
     DoubleNode<Type> * addedNode;
@@ -82,24 +87,27 @@ void CircularList<Type> :: add(Type item)
     {
         addedNode = new DoubleNode<Type>(item);
         this->front = addedNode;
+        this->end = addedNode;
+        this->end->setNext(addedNode);
     }
     else
     {
-        addedNode = new DoubleNode<Type>(item, this->end, this-front);
+        addedNode = new DoubleNode<Type>(item, this->end, this->front);
+        this->end->setNext(addedNode);
     }
-    this->end->setNext(addedNode);
     this->front->setPrevious(addedNode);
     this->end = addedNode;
     this->size++;
 }
 template<class Type>
+//Add at specific index location method
 void CircularList<Type> :: addAtIndex(int index, Type item)
 {
     assert (index >= 0 && index <= this->size);
     
     DoubleNode<Type> * next;
     DoubleNode<Type> * previous;
-    DoubleNode<Type. * addMe;
+    DoubleNode<Type> * addMe;
     
     if(index < this->size)
     {
@@ -127,6 +135,7 @@ void CircularList<Type> :: addAtIndex(int index, Type item)
     this->size++;
 }
 template<class Type>
+//Remove current index location and replace with next.
 Type CircularList<Type> :: remove(int index)
 {
     assert (index >= 0 && index < this->size);
@@ -164,6 +173,7 @@ Type CircularList<Type> :: setAtIndex(int index, Type item)
     return replaced;
 }
 template<class Type>
+//size / getsize - returns size of the list
 int CircularList<Type> :: getSize() const
 {
     return this->size;

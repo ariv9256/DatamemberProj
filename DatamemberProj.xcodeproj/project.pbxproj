@@ -84,6 +84,7 @@
 				0F098473220CC8D700E0694D /* LinkedList.hpp */,
 				0F95ED2D221215D80097AD15 /* Stack.hpp */,
 				0F53525A2214AADB00A5772F /* Queue.hpp */,
+				0F015CBB221F3035002D56E6 /* CircularList.hpp */,
 			);
 			path = Linear;
 			sourceTree = "<group>";
@@ -94,7 +95,6 @@
 				0F9DC03421FF916A0067795E /* Node.hpp */,
 				0F7FBFC52202330400942345 /* LinearNode.hpp */,
 				0F015CB8221F2A9B002D56E6 /* DoubleNode.hpp */,
-				0F015CBB221F3035002D56E6 /* CircularList.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";

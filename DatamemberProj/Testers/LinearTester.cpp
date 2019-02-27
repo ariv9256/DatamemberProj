@@ -34,9 +34,9 @@ void LinearTester :: testVsSTL()
     LinkedList<Music> musicList = FileController :: musicDataToList("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/music.csv");
     musicOOP.stopTimer();
     
-    cout<< "THis is the STL Read time: " << endl;
+    cout<< "This is the STL Read time: " << endl;
     musicSTL.displayInformation();
-    cout<<"This si the OOP Node Read Time"<< endl;
+    cout<<"This is the OOP Node Read Time"<< endl;
     musicOOP.displayInformation();
     cout<< "A difference of: " << musicOOP.getTimeInMicroseconds() - musicSTL.getTimeInMicroseconds() << " microseconds" << endl;
     
@@ -89,15 +89,31 @@ void LinearTester :: testVsStack()
     for(int index = 0; index < 10; index++)
     {
         crimeStack.push(crimes[index]);
-        cout<< moreCrimes[index] <<endl;
+        cout<< crimes[index] <<endl;
     }
     
 }
 void LinearTester :: testVsQueue()
 {
+    vector<Music> tunez = FileController :: musicDataToVector("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/music.csv");
+    LinkedList<Music> musicList = FileController :: musicDataToList("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/music.csv");
     
+    Queue<Music> musicQueue;
+    
+    for(int index = 0; index < 10; index++)
+    {
+        musicQueue.add(tunez[index]);
+        cout<< tunez[index] << endl;
+    }
 }
 void LinearTester :: testVsDouble()
 {
-    
+    CircularList<CrimeData> circleCrime = FileController :: readDataToCircle("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/crime.csv");
+    LinkedList<CrimeData> moreCrimes = FileController :: readDataToList("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/crime.csv");
+//    CircularList<CrimeData> crimeCircle;
+//    for(int index = 0; index < 10; index++)
+//    {
+//        crimeCircle.add(crimeCircle[index]);
+//        cout<<crimeCircle[index]<<endl;
+//    }
 }

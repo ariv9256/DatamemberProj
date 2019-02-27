@@ -13,6 +13,7 @@
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/DoubleNode.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
+#include "../Model/Linear/CircularList.hpp"
 #include "../Resources/Music.hpp"
 #include "../Resources/CrimeData.hpp"
 #include "../Testers/LinearTester.hpp"

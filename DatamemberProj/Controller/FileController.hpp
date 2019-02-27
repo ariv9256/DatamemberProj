@@ -19,6 +19,7 @@
 #include "../Resources/CrimeData.hpp"
 #include "../Model/Linear/Array.h"
 #include "../Model/Linear/LinkedList.hpp"
+#include "../Model/Linear/CircularList.hpp"
 //#include "..Model/NonLinear/BinarySearchTree.hpp"
 
 using namespace std;
@@ -34,6 +35,7 @@ public:
     //LinkedLists
     static LinkedList<CrimeData>readDataToList(string filename);
     static LinkedList<Music> musicDataToList(string filename);
+    static CircularList<CrimeData> readDataToCircle(string filename);
     //BST
 //    static BinarySearchTree<CrimeData> readDataToTree(string filename);
 //    static BinarySearchTree<Music> musicDataToTree(string filename);

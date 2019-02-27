@@ -43,6 +43,13 @@ DoubleNode<Type> :: DoubleNode(Type data) : Node<Type>(data)
     previous = nullptr;
     next = nullptr;
 }
+template <class Type>
+DoubleNode<Type> :: DoubleNode(Type data, DoubleNode<Type> * previous, DoubleNode<Type> * next)
+{
+    previous = previous;
+    next = next;
+}
+
 template<class Type>
 void DoubleNode<Type> :: setNext(DoubleNode<Type> * next)
 {

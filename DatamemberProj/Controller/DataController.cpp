@@ -31,7 +31,7 @@ void Controller :: testFiles()
     vector<Music> musicVector = FileController :: musicDataToVector("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/music.csv");
     for(int index = 234; index < 255; index++)
     {
-        cout << index<< ": contents are: " << musicVector[index]<< endl;
+        cout << index << ": contents are: " << musicVector[index] << endl;
     }
     vector<CrimeData> crimeVector = FileController :: readCrimeDataToVector("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/crime.csv");
     for(int index = 234; index < 255; index++)
