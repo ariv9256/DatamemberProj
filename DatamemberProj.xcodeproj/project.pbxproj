@@ -34,6 +34,7 @@
 		0F09846E220CBAB200E0694D /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
 		0F098473220CC8D700E0694D /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		0F098475220CD22200E0694D /* Music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Music.cpp; sourceTree = "<group>"; };
+		0F429955222DC63A001E2B18 /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
 		0F53525A2214AADB00A5772F /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		0F53525D2214AF2C00A5772F /* LinearTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinearTester.cpp; sourceTree = "<group>"; };
 		0F53525E2214AF2C00A5772F /* LinearTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearTester.hpp; sourceTree = "<group>"; };
@@ -67,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F429957222DC640001E2B18 /* NonLinear */ = {
+			isa = PBXGroup;
+			children = (
+				0F429955222DC63A001E2B18 /* Graph.hpp */,
+			);
+			path = NonLinear;
+			sourceTree = "<group>";
+		};
 		0F53525C2214AE9A00A5772F /* Testers */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +147,7 @@
 		0F9DC02B21FF8B850067795E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0F429957222DC640001E2B18 /* NonLinear */,
 				0F654185220239AD00DEBEE3 /* Linear */,
 				0F7FBFBF220226D200942345 /* Nodes */,
 			);
