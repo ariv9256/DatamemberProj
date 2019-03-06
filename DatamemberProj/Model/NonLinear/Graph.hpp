@@ -137,7 +137,7 @@ void Graph<Type> :: addEdgeUndirected(int source, int target)
     adjacencyMatrix[source][target] = true;
     adjacencyMatrix[target][source] = true;
 }
-//Next are the 3 individual remove edge methods, same style 
+//Next are the 3 individual remove edge methods, same style
 template<class Type>
 void Graph<Type> :: removeEdge(int source, int target)
 {
@@ -157,5 +157,50 @@ void Graph<Type> :: removeEdgeUndirected(int source, int target)
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     adjacencyMatrix[source][target] = false;
     adjacencyMatrix[target][source] = false;
+}
+/*
+ Next are the Connection checkers,
+ Checking the connection between the vertices / edge to determine whether the
+ user is looking for a one or two way connection (if it exists).
+ */
+template<class Type>
+bool Graph<Type> :: hasUndirectedConnection(int source, int target) const
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    
+    bool isAnEdge = false;
+    isAnEdge = adjacencyMatrix[source][target] || adjacencyMatrix[target][source] ;
+    
+    return isAnEdge;
+}
+
+template<class Type>
+bool Graph<TYpe> :: areConnected(int source, int target) const
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    
+    bool isAnEdge = false;
+    isAnEdge = adjacencyMatrix[source][target] ;
+    
+    return isAnEdge;
+}
+/*This next connection method doesn't directly associate with [source][target]
+but rather the neighbors method.
+This identifies all the connections of a vertex
+ */
+template<class Type>
+std::set<int> Graph<Type> :: neighbors(int vertex) const
+{
+    assert(vertex < vertexCount);
+    std::set<int> vertexNeighbors;
+    
+    for(int index = 0; index < vertexCount; index++)
+    {
+        if(adjacencyMatrix[vertex][index])
+        {
+            vertexNeighbors.insert(index);
+        }
+    }
+    return vertexNeighbors;
 }
 #endif /* Graph_hpp */
