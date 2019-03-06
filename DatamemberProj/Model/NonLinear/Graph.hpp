@@ -75,4 +75,37 @@ int Graph<Type> :: size() const
 {
     return vertexCount;
 }
+//left hand side operator
+template <class Type>
+Type & Graph<Type> :: operator[](int vertex)
+{
+    assert(vertex < vertexCount);
+    return graphData[vertex];
+}
+//right hand side operator
+template <class Type>
+Type Graph<Type> :: operator[](int vertex) const
+{
+    assert(vertex < vertexCount);
+    return graphData[vertex];
+}
+/*Vertices
+ Adding vertices requires verification that the Graph is not full,
+ Then assigning the current vertex for the adjacency matrix.
+ All values attaching to the index are false and stored in the data array.
+ */
+template <class Type>
+void Graph<Type> :: addVertex(const Type & value)
+{
+    assert(vertexCount < MAXIMUM);
+    int newVertexNumber = vertexCount;
+    vertexCount++;
+    
+    for(int otherVertexNumber = 0; otherVertexNumber < vertexCount; otherVertexNumber++)
+    {
+        adjacencyMatrix[otherVertexNumber][newVertexNumber] = false;
+        adjacencyMatrix[newVertexNumber][otherVertexNumber] = false;
+    }
+    graphData[newVertexNumber] = value;
+}
 #endif /* Graph_hpp */
