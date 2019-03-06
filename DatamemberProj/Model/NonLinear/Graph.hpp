@@ -108,4 +108,33 @@ void Graph<Type> :: addVertex(const Type & value)
     }
     graphData[newVertexNumber] = value;
 }
+/*
+ These are edges
+ There are 3 methods for edges,
+ Each validate the values of source & target,
+ Each type of edge depends on the graph in question which is why there's
+ 3 separate methods.
+ */
+template<class Type>
+void Graph<Type> :: addEdge(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = true;
+}
+
+template <class Type>
+void Graph<Type> :: addEdgeCost(int source, int target, int cost)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    weightCostMatrix[source][target] = cost;
+    weightCostMatrix[target][source] = cost;
+}
+
+template <class Type>
+void Graph<Type> :: addEdgeUndirected(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = true;
+    adjacencyMatrix[target][source] = true;
+}
 #endif /* Graph_hpp */
