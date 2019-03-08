@@ -108,12 +108,38 @@ void LinearTester :: testVsQueue()
 }
 void LinearTester :: testVsDouble()
 {
-    CircularList<CrimeData> circleCrime = FileController :: readDataToCircle("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/crime.csv");
+    Timer crimeTimerSLL, crimeTimerDLL;
+    
+    crimeTimerSLL.startTimer();
     LinkedList<CrimeData> moreCrimes = FileController :: readDataToList("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/crime.csv");
-//    CircularList<CrimeData> crimeCircle;
-//    for(int index = 0; index < 10; index++)
-//    {
-//        crimeCircle.add(crimeCircle[index]);
-//        cout<<crimeCircle[index]<<endl;
-//    }
+    crimeTimerSLL.stopTimer();
+    
+    crimeTimerDLL.startTimer();
+    CircularList<CrimeData> circleCrime = FileController :: readDataToCircle("/Users/ariv9256/Documents/C++ Projects/DatamemberProj/DatamemberProj/Resources/crime.csv");
+    crimeTimerDLL.stopTimer();
+    
+    cout << "This is the Single Linked List read time: " << endl;
+    crimeTimerSLL.displayInformation();
+    cout << "This is the Double Linked List read time: " << endl;
+    crimeTimerDLL.displayInformation();
+    cout << "A difference of: " << crimeTimerDLL.getTimeInMicroseconds() - crimeTimerSLL.getTimeInMicroseconds() << " microseconds" << endl;
+    
+    crimeTimerSLL.resetTimer();
+    crimeTimerDLL.resetTimer();
+    
+    int randomIndex = rand() % moreCrimes.getSize();
+    
+    crimeTimerSLL.startTimer();
+    moreCrimes.getFromIndex(randomIndex);
+    crimeTimerSLL.stopTimer();
+    
+    crimeTimerDLL.startTimer();
+    circleCrime.getFromIndex(randomIndex);
+    crimeTimerDLL.stopTimer();
+    
+    cout << "This is the Single Linked List read time: " << endl;
+    crimeTimerSLL.displayInformation();
+    cout << "This is the Double Linked List read time: " << endl;
+    crimeTimerDLL.displayInformation();
+    cout << "A difference of: " << crimeTimerDLL.getTimeInMicroseconds() - crimeTimerSLL.getTimeInMicroseconds() << " microseconds" << endl;
 }

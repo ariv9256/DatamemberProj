@@ -121,7 +121,9 @@ void Graph<Type> :: addEdge(int source, int target)
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     adjacencyMatrix[source][target] = true;
 }
-
+/* We can assume each coordinate spot knows of it's identity, but not all of them
+know of each other unless explicitly said in addEdgeUndirected
+ */
 template <class Type>
 void Graph<Type> :: addEdgeCost(int source, int target, int cost)
 {
@@ -202,5 +204,88 @@ std::set<int> Graph<Type> :: neighbors(int vertex) const
         }
     }
     return vertexNeighbors;
+}
+template <class Type>
+void Graph<Type> :: depthFirstTraveral(Graph<Type> & currentGraph, int vertex)
+{
+    bool visitedVertices[MAXIMUM];
+    assert(vertex < currentGraph.size());
+    std::fill_n(visitedVertices, currentGraph.size(), false);
+    depthFirstTraversal(currentGraph, vertex, visitedVertices);
+}
+template <class Type>
+void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, bool * visited)
+{
+    std::set<int> connections = currentGraph.neighbors(vertex);
+    std::set<int>::iterator setIterator;
+    
+    visited[vertex] = true;
+    cout << currentGraph[vertex] << ", " << endl;
+    
+    for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+    {
+        depthFirstTraversal(currentGraph, *setIterator, visited);
+    }
+}
+template<class Type>
+void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex)
+{
+    assert(vertex < currentGraph.size());
+    bool visited[MAXIMUM];
+    std:: set<int> connections;
+    std:: set<int>:: iterator setIterator;
+    std:: queue<int> vertexQueue;
+    
+    std::fill_n(visited, currentGraph.size(), false);
+    visited[vertex] = true;
+    cout << currentGraph[vertex] << endl;
+    vertexQueue.push(vertex);
+    while(!vertexQueue.empty())
+    {
+        connections = currentGraph.neighbors(vertexQueue.front());
+        vertexQueue.pop();
+        
+        for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+        {
+            if(!visited[*setIterator])
+            {
+                visited[*setIterator] = true;
+                cout << currentGraph[*setIterator] << endl;
+                vertexQueue.push(*setIterator);
+            }
+        }
+    }
+}
+template<class Type>
+int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
+{
+    assert(start >= 0 && start < vertexCount);
+    int cost = 0;
+    bool visited[MAXIMUM];
+    std::set<int> connections;
+    std::set<int> iterator setIterator;
+    std::queue<int> vertexQueue;
+    
+    std::fill_n(visited, currentGraph.size(), false);
+    visited[start] = true;
+    
+    vertexQueue.push(start);
+    while(!vertexQueue.empty())
+    {
+        int currentIndex = vertexQueue.front();
+        connections = currentGraph.neighbors(currentIndex);
+        vertexQueue.pop();
+        
+        for(setIterator = connections.begin(); steIterator != connections.end(); setIterator++)
+        {
+            if(visited[*setIterator])
+            {
+                cost += weightCostMatrix[currentIndex][*setIterator];
+                visited[*setIterator] = true;
+                vertexQueue.push(*setIterator);
+            }
+        }
+    }
+    return cost;
 }
 #endif /* Graph_hpp */

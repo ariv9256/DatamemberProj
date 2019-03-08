@@ -173,6 +173,13 @@ Type CircularList<Type> :: setAtIndex(int index, Type item)
     return replaced;
 }
 template<class Type>
+Type CircularList<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->size);
+    DoubleNode<Type> * holder = findNode(index);
+    return holder->getData();
+}
+template<class Type>
 //size / getsize - returns size of the list
 int CircularList<Type> :: getSize() const
 {
