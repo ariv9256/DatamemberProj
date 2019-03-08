@@ -205,6 +205,11 @@ std::set<int> Graph<Type> :: neighbors(int vertex) const
     }
     return vertexNeighbors;
 }
+/*
+The depth first traversal sets array to be filled with false,
+This is done by recursively calling the 'neighbors' class to visit all vertices
+To visit every vertix, we use a set iterator
+ */
 template <class Type>
 void Graph<Type> :: depthFirstTraveral(Graph<Type> & currentGraph, int vertex)
 {
@@ -227,6 +232,12 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, 
         depthFirstTraversal(currentGraph, *setIterator, visited);
     }
 }
+/*
+ In the breadth first traversal the unique values are tracked via a combination of a set and a
+ queue using the STL implementations instead of our custom one already in the linear section.
+ As each member of the supplied vertex’s neighbors is processed the vertex is popped off the queue;
+ then it checks if it has already been visited and if not, processes it, adds it to the queue to check for its neighbors.
+ */
 template<class Type>
 void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex)
 {
@@ -256,6 +267,11 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex
         }
     }
 }
+/*
+ The cost accruing traversal uses the same process as the breadth first traversal but instead
+ of merely outputting the values stored in the Graph it calculates the cost of the traversal from the
+ starting vertex to visit each of the vertices.
+ */
 template<class Type>
 int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
 {
