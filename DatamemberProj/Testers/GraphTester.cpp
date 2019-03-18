@@ -13,13 +13,25 @@ void GraphTester :: testGraphs()
     compareTraversals();
     findCheapestTraversal();
 }
-void compareTraversals()
+void GraphTester :: compareTraversals()
 {
-    
+    for (int index = 0; index < puzzle.size(); index++)
+    {
+        cout << "Breadth index: " << index << endl;
+        puzzle.breadthFirstTraversal(puzzle, index);
+        cout << "Depth index: " << index << endl;
+        puzzle.depthFirstTraversal(puzzle, index);
+    }
 }
-void findCheapestTraversal()
+void GraphTester :: findCheapestTraversal()
 {
-    
+    cout << "cost traversal" << endl;
+    for(int vertex = 0; vertex < puzzle.size(); vertex++)
+    {
+        cout << "Vertex " << vertex << ", " << endl;
+        cout << puzzle.costTraversal(puzzle, vertex) << endl;
+        cout << " " << endl;
+    }
 }
 void GraphTester :: setup()
 {
