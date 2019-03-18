@@ -235,7 +235,10 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, 
     
     for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
     {
-        depthFirstTraversal(currentGraph, *setIterator, visited);
+        if(!visited[*setIterator])
+        {
+            depthFirstTraversal(currentGraph, *setIterator, visited);
+        }
     }
 }
 /*
