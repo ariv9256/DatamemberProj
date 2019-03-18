@@ -20,7 +20,7 @@ class Graph
 {
 private:
     static const int MAXIMUM = 50;
-    bool adjacencyMatrix [MAXIMUM][MAXIUMUM];
+    bool adjacencyMatrix [MAXIMUM][MAXIMUM];
     int weightCostMatrix [MAXIMUM][MAXIMUM];
     Type graphData[MAXIMUM];
     int vertexCount;
@@ -48,11 +48,11 @@ public:
     //Check connections
     bool hasUndirectedConnection(int source, int target) const;
     bool areConnected(int source, int target) const;
-    std:::set<int> neighbors(int vertex) const;
+    std::set<int> neighbors(int vertex) const;
     
     //Traversals
     void depthFirstTraversal(Graph<Type> & graph, int vertext);
-    void breadthFirstTraversal(Graph<TYpe> & graph, int vertex);
+    void breadthFirstTraversal(Graph<Type> & graph, int vertex);
     int costTraversal(Graph <Type> & graph, int vertex); 
     
 };
@@ -177,7 +177,7 @@ bool Graph<Type> :: hasUndirectedConnection(int source, int target) const
 }
 
 template<class Type>
-bool Graph<TYpe> :: areConnected(int source, int target) const
+bool Graph<Type> :: areConnected(int source, int target) const
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     
@@ -211,7 +211,7 @@ This is done by recursively calling the 'neighbors' class to visit all vertices
 To visit every vertix, we use a set iterator
  */
 template <class Type>
-void Graph<Type> :: depthFirstTraveral(Graph<Type> & currentGraph, int vertex)
+void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex)
 {
     bool visitedVertices[MAXIMUM];
     assert(vertex < currentGraph.size());
