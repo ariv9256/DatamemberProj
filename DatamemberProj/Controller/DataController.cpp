@@ -14,7 +14,8 @@ void Controller :: start()
     cout << "Welcome to the Data Structures App." << endl;
     usingNodes();
     //testFiles();
-    testLinear();
+    //testLinear();
+    testGraphs();
 }
 
 void Controller :: usingNodes ()
@@ -45,4 +46,9 @@ void Controller :: testLinear()
     lookAtThis.testVsSTL();
     lookAtThis.testVsQueue();
     lookAtThis.testVsDouble();
+}
+void Controller :: testGraphs()
+{
+    GraphTester lookieHere;
+    lookieHere.testGraphs();
 }

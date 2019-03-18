@@ -17,6 +17,7 @@
 #include "../Resources/Music.hpp"
 #include "../Resources/CrimeData.hpp"
 #include "../Testers/LinearTester.hpp"
+#include "../Testers/GraphTester.hpp"
 #include <string>
 #include <fstream>
 #include <vector>
@@ -33,5 +34,6 @@ public:
     void start();
     void testFiles();
     void testLinear();
+    void testGraphs();
 };
 #endif /* DataController_hpp */

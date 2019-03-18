@@ -34,7 +34,7 @@ public:
     //Connect vertices
     void addEdge(int source, int target);
     void addEdgeUndirected(int source, int target);
-    void addEdgeCost(int source, int target);
+    void addEdgeCost(int source, int target, int cost);
     //Disconnect vertices
     void removeEdge(int source, int target);
     void removeEdgeUndirected(int source, int target);
@@ -63,6 +63,12 @@ template<class Type>
 Graph<Type> :: Graph()
 {
     this->vertexCount = 0;
+    
+    for(int index = 0; index < MAXIMUM; index++)
+    {
+        int * row = weightCostMatrix[index];
+        std::fill_n(row, MAXIMUM, 0);
+    }
 }
 /*
  Since we cannot "remove" from an array in C++,
@@ -279,7 +285,7 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
     int cost = 0;
     bool visited[MAXIMUM];
     std::set<int> connections;
-    std::set<int> iterator setIterator;
+    std::set<int>::iterator setIterator;
     std::queue<int> vertexQueue;
     
     std::fill_n(visited, currentGraph.size(), false);
@@ -292,7 +298,7 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
         connections = currentGraph.neighbors(currentIndex);
         vertexQueue.pop();
         
-        for(setIterator = connections.begin(); steIterator != connections.end(); setIterator++)
+        for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
         {
             if(visited[*setIterator])
             {

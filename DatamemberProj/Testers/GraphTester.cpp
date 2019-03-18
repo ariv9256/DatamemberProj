@@ -7,7 +7,20 @@
 //
 
 #include "GraphTester.hpp"
-
+void GraphTester :: testGraphs()
+{
+    setup();
+    compareTraversals();
+    findCheapestTraversal();
+}
+void compareTraversals()
+{
+    
+}
+void findCheapestTraversal()
+{
+    
+}
 void GraphTester :: setup()
 {
     puzzle.addVertex("a ");
