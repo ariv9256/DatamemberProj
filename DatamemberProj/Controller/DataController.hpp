@@ -18,6 +18,7 @@
 #include "../Resources/CrimeData.hpp"
 #include "../Testers/LinearTester.hpp"
 #include "../Testers/GraphTester.hpp"
+#include "../Testers/BinaryTreeTester.hpp"
 #include <string>
 #include <fstream>
 #include <vector>
