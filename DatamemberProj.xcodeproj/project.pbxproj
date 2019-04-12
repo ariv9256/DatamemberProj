@@ -11,6 +11,7 @@
 		0F53525F2214AF2C00A5772F /* LinearTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F53525D2214AF2C00A5772F /* LinearTester.cpp */; };
 		0F63BFA022400FFF00E8C9D7 /* GraphTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F63BF9E22400FFF00E8C9D7 /* GraphTester.cpp */; };
 		0F790B6A22611E74007506E2 /* BinaryTreeTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F790B6822611E74007506E2 /* BinaryTreeTester.cpp */; };
+		0F790B6D22612262007506E2 /* BinarySearchTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F790B6B22612262007506E2 /* BinarySearchTree.cpp */; };
 		0F91A437220A170800BDC924 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F91A435220A170800BDC924 /* Timer.cpp */; };
 		0F91A43C220A1C3B00BDC924 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F91A43A220A1C3B00BDC924 /* FileController.cpp */; };
 		0F91A43F220A1EB700BDC924 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F91A43E220A1EB700BDC924 /* CrimeData.cpp */; };
@@ -46,6 +47,9 @@
 		0F790B6622610D29007506E2 /* BinaryTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeNode.hpp; sourceTree = "<group>"; };
 		0F790B6822611E74007506E2 /* BinaryTreeTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryTreeTester.cpp; sourceTree = "<group>"; };
 		0F790B6922611E74007506E2 /* BinaryTreeTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeTester.hpp; sourceTree = "<group>"; };
+		0F790B6B22612262007506E2 /* BinarySearchTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinarySearchTree.cpp; sourceTree = "<group>"; };
+		0F790B6C22612262007506E2 /* BinarySearchTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinarySearchTree.hpp; sourceTree = "<group>"; };
+		0F790B71226122BC007506E2 /* Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
 		0F7FBFC52202330400942345 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		0F91A435220A170800BDC924 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		0F91A436220A170800BDC924 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				0F429955222DC63A001E2B18 /* Graph.hpp */,
+				0F790B6B22612262007506E2 /* BinarySearchTree.cpp */,
+				0F790B6C22612262007506E2 /* BinarySearchTree.hpp */,
 			);
 			path = NonLinear;
 			sourceTree = "<group>";
@@ -116,6 +122,7 @@
 				0F7FBFC52202330400942345 /* LinearNode.hpp */,
 				0F015CB8221F2A9B002D56E6 /* DoubleNode.hpp */,
 				0F790B6622610D29007506E2 /* BinaryTreeNode.hpp */,
+				0F790B71226122BC007506E2 /* Tree.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 				0F63BFA022400FFF00E8C9D7 /* GraphTester.cpp in Sources */,
 				0F790B6A22611E74007506E2 /* BinaryTreeTester.cpp in Sources */,
 				0F91A43F220A1EB700BDC924 /* CrimeData.cpp in Sources */,
+				0F790B6D22612262007506E2 /* BinarySearchTree.cpp in Sources */,
 				0F9DC03121FF8BE70067795E /* DataController.cpp in Sources */,
 				0F9DC03321FF8C060067795E /* DataRunner.cpp in Sources */,
 				0F91A43C220A1C3B00BDC924 /* FileController.cpp in Sources */,

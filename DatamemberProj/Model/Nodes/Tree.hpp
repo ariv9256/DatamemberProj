@@ -1,14 +1,14 @@
 //
-//  BinaryTreeTester.cpp
+//  Tree.hpp
 //  DatamemberProj
 //
 //  Created by Rivas, Angela on 4/12/19.
 //  Copyright © 2019 CTEC CSP. All rights reserved.
 //
 
-#include "BinaryTreeTester.hpp"
+#ifndef Tree_hpp
+#define Tree_hpp
 
-void BinaryTreeTester :: treeStuff()
-{
-    
-}
+#include <stdio.h>
+
+#endif /* Tree_hpp */
