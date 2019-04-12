@@ -96,4 +96,20 @@ void BinarySearchTree<Type> :: postOrderTraversal()
 {
     
 }
+//Data operation method stubs below
+template<class Type>
+void BinarySearchTree<Type> :: insert(Type item)
+{
+    
+}
+template<class Type>
+bool BinarySearchTree<Type> :: contains(Type value)
+{
+    return false;
+}
+template<class Type>
+void BinarySearchTree<Type> :: remove(Type item)
+{
+    
+}
 #endif /* BinarySearchTree_hpp */
