@@ -11,7 +11,6 @@
 
 #include <iostream>
 #include "../Nodes/LinearNode.hpp"
-#include <assert.h>
 
 template <class Type>
 class List
