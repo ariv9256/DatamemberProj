@@ -44,7 +44,7 @@ public:
     void postOrderTraversal();
     void demoTraversalSteps(BinaryTreeNode<Type> * node);
     
-    int getSizee();
+    int getSize();
     int getHeight();
     bool isComplete();
     bool isBalanced();
@@ -55,6 +55,45 @@ public:
     
     Type findMinimum();
     Type findMaximum();
+};
+/*
+ * Have to incorporate stubs from tree class
+ * This is the informational method supporter stubs below
+ */
+template <class Type>
+int BinarySearchTree<Type> :: getHeight()
+{
+    return -1;
 }
-
+template <class Type>
+int BinarySearchTree<Type> :: getSize()
+{
+    return -1;
+}
+template<class Type>
+bool BinarySearchTree<Type> :: isComplete()
+{
+    return false;
+}
+template<class Type>
+bool BinarySearchTree<Type> :: isBalanced()
+{
+    return false;
+}
+//Traversal Stubs below
+template <class Type>
+void BinarySearchTree<Type> :: inOrderTraversal()
+{
+    
+}
+template <class Type>
+void BinarySearchTree<Type> :: preOrderTraversal()
+{
+    
+}
+template <class Type>
+void BinarySearchTree<Type> :: postOrderTraversal()
+{
+    
+}
 #endif /* BinarySearchTree_hpp */
