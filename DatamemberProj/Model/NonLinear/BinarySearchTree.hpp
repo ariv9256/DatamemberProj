@@ -56,6 +56,18 @@ public:
     Type findMinimum();
     Type findMaximum();
 };
+template<class Type>
+BinarySearchTree<Type> :: BinarySearchTree()
+{
+    this->root = nullptr;
+}
+template<class Type>
+BinarySearchTree<Type> :: ~BinarySearchTree()
+{
+    //destroy tree method
+}
+
+
 /*
  * Have to incorporate stubs from tree class
  * This is the informational method supporter stubs below
@@ -169,7 +181,7 @@ void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * current
     {
         postOrderTraversal(currentNode->getLeftChild());
         postOrderTraversal(currentNode->getRightChild());
-        cout << currentNode->getData << endl;
+        cout << currentNode->getData() << endl;
     }
 }
 //Data operation method stubs below
