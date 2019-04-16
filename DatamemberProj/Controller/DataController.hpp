@@ -36,5 +36,6 @@ public:
     void testFiles();
     void testLinear();
     void testGraphs();
+    void treeStuff();
 };
 #endif /* DataController_hpp */

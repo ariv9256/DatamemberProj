@@ -16,6 +16,7 @@ void Controller :: start()
     //testFiles();
     //testLinear();
 //    testGraphs();
+    treeStuff();
 }
 
 void Controller :: usingNodes ()
@@ -51,4 +52,9 @@ void Controller :: testGraphs()
 {
     GraphTester lookieHere;
     lookieHere.testGraphs();
+}
+void Controller :: treeStuff()
+{
+    BinaryTreeTester trees;
+    trees.treeStuff();
 }

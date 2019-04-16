@@ -23,4 +23,19 @@ void BinaryTreeTester :: treeStuff()
     testTree.insert(101);
     
     testTree.inOrderTraversal();
+    testTree.preOrderTraversal();
+    testTree.postOrderTraversal();
+    
+    moreTree.insert("cat");
+    moreTree.insert("dog");
+    moreTree.insert("fish");
+    moreTree.insert("bunny");
+    moreTree.insert("bird");
+    moreTree.insert("lizard");
+    moreTree.insert("ferret");
+    moreTree.insert("hamster");
+    
+    moreTree.inOrderTraversal();
+    moreTree.preOrderTraversal();
+    moreTree.postOrderTraversal();
 }
