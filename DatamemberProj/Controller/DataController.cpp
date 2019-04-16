@@ -12,10 +12,10 @@
 void Controller :: start()
 {
     cout << "Welcome to the Data Structures App." << endl;
-    usingNodes();
+//    usingNodes();
     //testFiles();
     //testLinear();
-    testGraphs();
+//    testGraphs();
 }
 
 void Controller :: usingNodes ()

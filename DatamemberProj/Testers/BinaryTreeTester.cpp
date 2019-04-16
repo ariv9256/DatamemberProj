@@ -20,7 +20,7 @@ void BinaryTreeTester :: treeStuff()
     testTree.insert(4380);
     testTree.insert(99);
     testTree.insert(9001);
-    testTree.insert(101)
+    testTree.insert(101);
     
     testTree.inOrderTraversal();
 }
