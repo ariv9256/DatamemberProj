@@ -25,7 +25,7 @@ protected:
     
     void inOrderTraversal(BinaryTreeNode<Type> * currentNode);
     void preOrderTraversal(BinaryTreeNode<Type> * currentNode);
-    void postOrderTraversal(BinaryTreeNode<Type> * postStart);
+    void postOrderTraversal(BinaryTreeNode<Type> * currentNode);
     
     void destroyTree(BinaryTreeNode<Type> * node);
     
@@ -112,17 +112,22 @@ void BinarySearchTree<Type> :: inOrderTraversal(BinarySearchTree<Type> * current
         inOrderTraversal(currentNode->getRightChild());
     }
 }
-//template <class Type>
-//void BinarySearchTree<Type> :: postOrderTraversal()
-//{
-//
-//}
+template <class Type>
+void BinarySearchTree<Type> :: postOrderTraversal()
+{
+    postOrderTraversal(this->root);
+}
+template <class Type>
+void BinarySearchTree<Type> :: postOrderTraversal(BinarySearchTree<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        postOrderTraversal(currentNode->getLeftChild());
+        postOrderTraversal(currentNode->getRightChild());
+        cout << currentNode->getData << endl;
+    }
+}
 //Data operation method stubs below
-//template<class Type>
-//void BinarySearchTree<Type> :: insert(Type item)
-//{
-//
-//}
 template<class Type>
 bool BinarySearchTree<Type> :: contains(Type value)
 {
