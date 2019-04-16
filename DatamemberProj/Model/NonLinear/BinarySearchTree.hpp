@@ -66,8 +66,6 @@ BinarySearchTree<Type> :: ~BinarySearchTree()
 {
     //destroy tree method
 }
-
-
 /*
  * Have to incorporate stubs from tree class
  * This is the informational method supporter stubs below
@@ -75,16 +73,34 @@ BinarySearchTree<Type> :: ~BinarySearchTree()
 template <class Type>
 int BinarySearchTree<Type> :: getHeight()
 {
-    return calculatedHeight(this->root);
+    return calculateHeight(this->root);
+}
+template<class Type>
+int BinarySearchTree<Type> :: calculateHeight(BinaryTreeNode<Type> * current)
+{
+    if(current != nullptr)
+    {
+        return max(calculateHeight(current->getLeftChild()), calculateHeight(current->getRightChild())) +1;
+    }
+    return 0;
 }
 template <class Type>
 int BinarySearchTree<Type> :: getSize()
 {
     int size = 0;
     
-    size += calculatedSize(this->root);
+    size += calculateSize(this->root);
     
     return size;
+}
+template<class Type>
+int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * current)
+{
+    if(current != nullptr)
+    {
+        return calculateSize(current->getLeftChild()), calculateSize(current->getRightChild()) +1;
+    }
+    return 0;
 }
 template<class Type>
 bool BinarySearchTree<Type> :: isComplete()
@@ -119,8 +135,8 @@ bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
         return true;
     }
     
-    leftHeight = calculatedHeight(current->getLeftChild());
-    rightHeight = calculatedHeight(current->getRightChild());
+    leftHeight = calculateHeight(current->getLeftChild());
+    rightHeight = calculateHeight(current->getRightChild());
     
     int heightDifference = abs(leftHeight - rightHeight);
     bool leftBalanced = isBalanced(current->getLeftChild());
@@ -135,7 +151,7 @@ bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
 template<class Type>
 bool BinarySearchTree<Type> :: isBalanced()
 {
-    return isbalanced(this->root);
+    return isBalanced(this->root);
 }
 //Traversal Stubs below
 
