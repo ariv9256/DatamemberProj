@@ -64,7 +64,17 @@ BinarySearchTree<Type> :: BinarySearchTree()
 template<class Type>
 BinarySearchTree<Type> :: ~BinarySearchTree()
 {
-    //destroy tree method
+    destroyTree(this->root);
+}
+template<class Type>
+void BinarySearchTree<Type> :: destroyTree(BinaryTreeNode<Type> * node)
+{
+    if(node != nullptr)
+    {
+        destroyTree(node->getLeftChild());
+        destroyTree(node->getRightChild());
+        delete node;
+    }
 }
 /*
  * Have to incorporate stubs from tree class
@@ -222,11 +232,11 @@ bool BinarySearchTree<Type> :: contains(Type itemToFind)
             //if tree contains more, move left or right
             else if(itemToFind < current->getData())
             {
-                current = current->getLeftNode();
+                current = current->getLeftChild();
             }
             else
             {
-                current = current->getRightNode();
+                current = current->getRightChild();
             }
         }
         return false;
@@ -256,11 +266,11 @@ void BinarySearchTree<Type> :: remove(Type getRidOfMe)
                 previous = current;
                 if(getRidOfMe < current->getData())
                 {
-                    current = current->getLeftNode();
+                    current = current->getLeftChild();
                 }
                 else
                 {
-                    current = current->getRightNode();
+                    current = current->getRightChild();
                 }
             }
         }

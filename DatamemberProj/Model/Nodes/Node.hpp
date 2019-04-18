@@ -32,7 +32,7 @@ Node<Type> :: Node()
 template <class Type>
 Node<Type> :: Node(Type data)
 {
-    this->data;
+    this->data = data;
 }
 
 template <class Type>
