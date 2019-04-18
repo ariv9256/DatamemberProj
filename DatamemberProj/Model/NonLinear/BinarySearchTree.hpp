@@ -392,5 +392,44 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
         insertMe->setRootNode(previous);
     }
 }
-
+//get left/right most children methods
+template<class Type>
+BinaryTreeNode<Type> * BinarySearchTree<Type> :: getLeftMostChild(BinaryTreeNode<Type> * startingNode)
+{
+    BinaryTreeNode<Type> * currentNode = startingNode;
+    BinaryTreeNode<Type> * previous = nullptr;
+    while(currentNode != nullptr)
+    {
+        previous = currentNode;
+        currentNode = currentNode->getLeftNode();
+    }
+    
+    return previous;
+}
+template<class Type>
+BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinaryTreeNode<Type> * startingNode)
+{
+    BinaryTreeNode<Type> * currentNode = startingNode;
+    BinaryTreeNode<Type> * previous = nullptr;
+    while(currentNode != nullptr)
+    {
+        previous = currentNode;
+        currentNode = currentNode->getRightNode();
+    }
+    
+    return previous;
+}
+//Max and Min
+template<class Type>
+Type BinarySearchTree<Type> :: findMaximum()
+{
+    assert(this->root != nullptr);
+    return getRightMostChild(this->root)->getData();
+}
+template<class Type>
+Type BinarySearchTree<Type> :: findMinimum()
+{
+    assert(this->root != nullptr);
+    return getLeftMostChild(this->root)->getData();
+}
 #endif /* BinarySearchTree_hpp */
