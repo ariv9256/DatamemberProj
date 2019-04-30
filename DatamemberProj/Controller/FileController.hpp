@@ -22,6 +22,7 @@
 #include "../Model/Linear/CircularList.hpp"
 #include "../Model/Nodes/BinaryTreeNode.hpp"
 #include "../Model/NonLinear/BinarySearchTree.hpp"
+#include "..Model/NonLinear/AVLTree.hpp"
 using namespace std;
 
 class FileController
