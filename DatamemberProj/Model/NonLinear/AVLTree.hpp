@@ -47,4 +47,36 @@ void AVLTree<Type> :: remove(Type item)
 {
     removeNode(this->getRoot(), item);
 }
+template<class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: insertNode(BinaryTreeNode<Type> * parent, Type inserted)
+{
+    //If the node is == nullptr, it inserts node as root of type parent
+    if(parent == nullptr)
+    {
+        parent = new BinaryTreeNode<Type>(inserted);
+        if(this->getRoot() == nullptr)
+        {
+            this->setRoot(parent);
+        }
+        return parent;
+    }
+    //If less than parent, insert to left
+    else if(inserted < parent->getNodeData())
+    {
+        parent->setLeftChild(insertNode(parent->getLeftChild(), inserted));
+        parent = balanceSubTree(parent);
+    }
+    //If greater than parent, insert to right
+    else if(inserted > parent->getNodeData())
+    {
+        parent->setRightChild(insertNode(parent->getRightChild(), inserted));
+        parent = balanceSubTree(parent);
+    }
+    return parent;
+}
+template<class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: removeNode(BinaryTreeNode<Type> * parent, Type inserted)
+{
+    
+}
 #endif /* AVLTree_hpp */
